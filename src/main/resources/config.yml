@@ -1,0 +1,52 @@
+# =========================================================
+#  DarkTrap - основной конфигурационный файл
+#  Настройки конкретных трапок находятся в:
+#  plugins/DarkTrap/Traps/<название>/config.yml
+# =========================================================
+
+# Миры, в которых запрещено ставить трапки
+disabled-worlds:
+  - world_nether
+  - world_the_end
+
+# Блоки, которые НИКОГДА не будут заменены трапкой,
+# даже если они находятся внутри зоны установки.
+protected-blocks:
+  - BEDROCK
+  - OBSIDIAN
+  - BARRIER
+  - END_PORTAL
+  - END_PORTAL_FRAME
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - STRUCTURE_BLOCK
+  - STRUCTURE_VOID
+  - JIGSAW
+  - SPAWNER
+  - REINFORCED_DEEPSLATE
+
+# Общие настройки системы
+settings:
+  # Уведомлять ли игрока, когда он пытается сломать блок трапки
+  notify-block-break-attempt: true
+  # Максимальная дальность поиска блока при использовании трапки в воздух (right-click air)
+  max-target-distance: 12
+
+# Сообщения плагина. Поддерживаются цветовые коды "&".
+# %trap%, %player%, %seconds% - плейсхолдеры.
+messages:
+  no-permission: "&cУ вас нет прав на это действие."
+  player-not-found: "&cИгрок не найден."
+  usage-give: "&eИспользование: /darktrap give <игрок> <трапка>"
+  usage-create: "&eИспользование: /darktrap create <название>"
+  trap-not-found: "&cТрапка '%trap%' не найдена."
+  trap-already-exists: "&cТрапка с названием '%trap%' уже существует."
+  trap-created: "&aТрапка '%trap%' успешно создана. Настройте её в Traps/%trap%/config.yml"
+  trap-given: "&aВы выдали трапку '%trap%' игроку %player%."
+  trap-received: "&aВы получили трапку: %trap%"
+  cooldown-active: "&cПодождите &e%seconds%с &cперед повторным использованием этой трапки."
+  trap-place-success: "&aТрапка установлена!"
+  # Сообщение при запрете установки трапки (ActionBar, поддерживает "&")
+  trap-place-denied: "&4Ало чепух тут нельзя ставить трапку"
+  block-break-denied: "&cВы не можете ломать блоки трапки."

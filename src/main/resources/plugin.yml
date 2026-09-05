@@ -1,0 +1,30 @@
+name: DarkTrap
+version: '${project.version}'
+main: com.darktrap.DarkTrapPlugin
+api-version: '1.21'
+author: DarkTrap
+description: Custom PvP trap system with fully configurable trap types.
+
+commands:
+  darktrap:
+    description: Main DarkTrap command.
+    usage: "/darktrap <give|create> ..."
+    permission: darktrap.use
+
+permissions:
+  darktrap.use:
+    description: Allows using DarkTrap items.
+    default: true
+  darktrap.give:
+    description: Allows giving trap items to players via command.
+    default: op
+  darktrap.create:
+    description: Allows creating new trap types via command.
+    default: op
+  darktrap.admin:
+    description: Full access to all DarkTrap features.
+    default: op
+    children:
+      darktrap.use: true
+      darktrap.give: true
+      darktrap.create: true
