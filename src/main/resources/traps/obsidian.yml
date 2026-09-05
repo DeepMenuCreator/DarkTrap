@@ -1,0 +1,30 @@
+# Конфигурация трапки "obsidian"
+
+name: "&5Obsidian Trap"
+
+item:
+  material: NETHER_STAR
+  name: "&5Обсидиановая трапка"
+  lore:
+    - "&7Заключает противника в обсидиановую клетку"
+    - "&7ПКМ чтобы установить"
+
+duration: 10
+activation-delay: 0
+cooldown: 20
+
+size:
+  radius: 2
+  height: 3
+
+blocks:
+  wall: OBSIDIAN
+  floor: OBSIDIAN
+  roof: OBSIDIAN
+
+effects:
+  - type: SLOWNESS
+    amplifier: 1
+    duration: 40
+
+messages: {}
